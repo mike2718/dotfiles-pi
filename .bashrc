@@ -112,5 +112,35 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# 短别名
+alias a='awk'
+alias c='clear'
+alias g='grep'
+alias l='$PAGER'
+alias L='|$PAGER'
+alias N='>/dev/null 2>&1' N1='>/dev/null' N2='2>/dev/null'
+
+# Ubuntu 18.04 默认
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# 自用ls系列
+alias lh='ls -lh'
+alias lt='ls -talF'
+alias lsd='ls -d */'
+alias lshf='ls -ld .?*'
+
 export PATH=/usr/local/clang_10.0.1/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/clang_10.0.1/lib:$LD_LIBRARY_PATH
+
+EDITOR=vim
+VISUAL=vim
+PAGER=less
+LESS=meiX
+
+export PATH EDITOR VISUAL PAGER LESS
+
+umask 022
+
+# vim: set et sw=2 sts=2 tw=78 ft=sh:
