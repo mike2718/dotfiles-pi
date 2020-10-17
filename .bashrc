@@ -131,9 +131,6 @@ alias lt='ls -talF'
 alias lsd='ls -d */'
 alias lshf='ls -ld .?*'
 
-export PATH=/usr/local/clang_10.0.1/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/clang_10.0.1/lib:$LD_LIBRARY_PATH
-
 EDITOR=vim
 VISUAL=vim
 PAGER=less
@@ -142,5 +139,11 @@ LESS=meiX
 export PATH EDITOR VISUAL PAGER LESS
 
 umask 022
+
+export PATH=/usr/local/clang_10.0.1/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/clang_10.0.1/lib:$LD_LIBRARY_PATH
+
+export CC=clang
+export CFLAGS='-Wall -Wpedantic'
 
 # vim: set et sw=2 sts=2 tw=78 ft=sh:
